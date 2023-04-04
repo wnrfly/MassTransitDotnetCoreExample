@@ -2,7 +2,6 @@
 
 #Install the MassTransit library for .NET Core using NuGet:
 
-#csharp
 
 #dotnet add package MassTransit.RabbitMQ
 
@@ -25,7 +24,7 @@ var busControl = Bus.Factory.CreateUsingRabbitMq(cfg =>
 
 Write the code to publish an event to the bus:
 
-arduino
+
 
 // Publish an event to the bus
 await busControl.Publish(new SomeEvent { Message = "Hello, world!" });
@@ -33,7 +32,7 @@ Console.WriteLine("Event published to the bus");
 
 Write the code to consume events from the bus:
 
-arduino
+
 
     // Define a consumer class
     public class SomeEventConsumer : IConsumer<SomeEvent>
