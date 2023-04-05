@@ -34,7 +34,7 @@ public class ScheduledMessageConsumer : IConsumer<ScheduledMessage>
     }
 }
 
-# //You can then register the consumer with MassTransit
+#You can then register the consumer with MassTransit
 
 busControl.ConnectConsumeToQueue("your_queue_name", x => x.Consumer<ScheduledMessageConsumer>());
 
@@ -42,5 +42,5 @@ one last trick should take care about
 
 //the "rabbitmq_delayed_message_exchange" are not enabled by default we need to enable it by 
 
-## rabbitmq-plugins enable rabbitmq_delayed_message_exchange
+##rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 using the command provided to enable rabbitmq_delayed_message_exchange which are required for delayed messages 
