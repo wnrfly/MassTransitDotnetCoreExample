@@ -42,5 +42,5 @@ one last trick should take care about
 
 //the "rabbitmq_delayed_message_exchange" are not enabled by default we need to enable it by 
 
-##rabbitmq-plugins enable rabbitmq_delayed_message_exchange
-using the command provided to enable rabbitmq_delayed_message_exchange which are required for delayed messages 
+#rabbitmq-plugins enable rabbitmq_delayed_message_exchange
+#using the command provided to enable rabbitmq_delayed_message_exchange which are required for delayed messages 
