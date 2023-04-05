@@ -21,7 +21,7 @@ public class ScheduledMessage
 
 var scheduledTime = DateTime.Now.AddMinutes(5);
 var endpoint = await busControl.GetSendEndpoint(new Uri("rabbitmq://localhost/my_queue_name"));
-await endpoint.ScheduleSend(scheduledTime, new ScheduledMessage { Message = "Ramadan Kareem" });
+await endpoint.ScheduleSend(scheduledTime, new ScheduledMessage { MyMessage = "Ramadan Kareem" });
 
 #To consume the scheduled message, you can use the IScheduledMessageConsumer interface provided by MassTransit. For example:
 
