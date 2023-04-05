@@ -1,5 +1,5 @@
-First configure MassTransit to use RabbitMQ as the message broker. 
-You can do this by installing the MassTransit.RabbitMQ NuGet package and configuring the bus
+//First configure MassTransit to use RabbitMQ as the message broker. 
+//You can do this by installing the MassTransit.RabbitMQ NuGet package and configuring the bus
 
 var busControl = Bus.Factory.CreateUsingRabbitMq(cfg =>
 {
@@ -17,7 +17,7 @@ public class ScheduledMessage
     public string MyMessage { get; set; }
 }
 
-#Use the IBusScheduleSendEndpoint to schedule the message to be sent at a specific time:
+//Use the IBusScheduleSendEndpoint to schedule the message to be sent at a specific time:
 
 var scheduledTime = DateTime.Now.AddMinutes(5);
 var endpoint = await busControl.GetSendEndpoint(new Uri("rabbitmq://localhost/my_queue_name"));
@@ -42,5 +42,5 @@ one last trick should take care about
 
 //the "rabbitmq_delayed_message_exchange" are not enabled by default we need to enable it by 
 
-#rabbitmq-plugins enable rabbitmq_delayed_message_exchange
-#using the command provided to enable rabbitmq_delayed_message_exchange which are required for delayed messages 
+//rabbitmq-plugins enable rabbitmq_delayed_message_exchange
+//using the command provided to enable rabbitmq_delayed_message_exchange which are required for delayed messages 
